@@ -1,7 +1,7 @@
 import { BookService, UserService } from './services';
 import { Validation } from './validation';
 import { Modal } from './modal';
-import { IBook, IUser } from './models';
+import { IBook } from './models';
 
 class App {
   bookService: BookService;

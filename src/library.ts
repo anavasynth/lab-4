@@ -1,4 +1,4 @@
-import { IBook, IUser, Book, User } from './models';
+import { IBook, IUser } from './models';
 
 export class Library<T extends IBook | IUser> {
   private items: T[] = [];
@@ -31,6 +31,8 @@ export class Library<T extends IBook | IUser> {
 
   add(item: T): string {
     const id = this.generateId();
+
+    // eslint-disable-next-line  @typescript-eslint/no-explicit-any
     (item as any).id = id;
     this.items.push(item);
     this.saveToStorage();
