@@ -9,7 +9,8 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "lint": "eslint src",
-    "prepare": "husky"
+    "prepare": "husky",
+    "test": "mocha --require ts-node/register --recursive test/**/*.ts"
   },
   "repository": {
     "type": "git",
@@ -18,14 +19,17 @@
   "private": true,
   "devDependencies": {
     "@types/bootstrap": "^5.2.10",
+    "@types/mocha": "^10.0.8",
     "css-loader": "^7.1.2",
     "eslint": "^9.10.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
     "husky": "^9.1.6",
+    "mocha": "^10.7.3",
     "prettier": "^3.3.3",
     "style-loader": "^4.0.0",
     "ts-loader": "^9.5.1",
+    "ts-node": "^10.9.2",
     "typescript": "^5.5.4",
     "typescript-eslint": "^8.6.0",
     "webpack": "^5.94.0",
